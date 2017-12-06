@@ -1,6 +1,11 @@
-@media (max-width: 767px) {
-    /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */
-    body {
-        padding-top: 50px;
-    }
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100,400,400i,700');
+
+html, body {
+    min-width: 360px;
+    width: auto;
+    font-family: 'Roboto Mono', monospace;
+}
+
+body {
+    padding-top: 50px;
 }
