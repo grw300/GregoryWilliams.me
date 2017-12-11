@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GregoryWilliams.Web", "Web\GregoryWilliams.Web.csproj", "{533FB7A7-9604-488C-A81B-6B655F567427}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GregoryWilliams.Api", "Api\GregoryWilliams.Api.csproj", "{14A782D0-1485-4EA0-BF09-828D4B1D4840}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{533FB7A7-9604-488C-A81B-6B655F567427}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{533FB7A7-9604-488C-A81B-6B655F567427}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{533FB7A7-9604-488C-A81B-6B655F567427}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{533FB7A7-9604-488C-A81B-6B655F567427}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14A782D0-1485-4EA0-BF09-828D4B1D4840}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14A782D0-1485-4EA0-BF09-828D4B1D4840}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14A782D0-1485-4EA0-BF09-828D4B1D4840}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14A782D0-1485-4EA0-BF09-828D4B1D4840}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5E40A058-8262-4C10-B4A3-9167FBE1069C}
+	EndGlobalSection
+EndGlobal

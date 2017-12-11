@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "devour-client": "file:typings\\custom\\devour-client.d.ts"
+  }
+}
