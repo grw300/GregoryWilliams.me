@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import { mapState } from 'vuex'
-import { Component } from 'vue-property-decorator';
+import { Component, Prop } from 'vue-property-decorator';
 
 interface Post {
     title: string;
@@ -9,10 +9,14 @@ interface Post {
 
 @Component
 export default class PostComponent extends Vue {
-    posts: Post[] = [];
+    @Prop() passedPost: Post;
+    post = this.passedPost;
 
     created() {
         //posts => this.$store.state.posts;
-        this.posts = this.$store.state.posts;
+        //this.posts = this.$store.state.posts;
+    }
+    get contentPreview() {
+            return this.post.content.substr(0, 30) + '...'
     }
 }

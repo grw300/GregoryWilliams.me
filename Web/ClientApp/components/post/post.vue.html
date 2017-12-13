@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <!-- <div>
         <h1>Posts</h1>
 
         <p>This component demonstrates fetching data from the server.</p>
@@ -20,7 +20,19 @@
         </table>
 
         <p v-else><em>Loading...</em></p>
-    </div>
+    </div> -->
+    <article>
+        <div class="thumbnail text-center">
+            <img class="img-responsive" src="../../images/banner.jpg" alt="" />
+            <div class="caption">
+                <header class="major">
+                    <h3><a href="" class="link">{{ post.title }}</a></h3>
+                    <p>{{ contentPreview }}</p>
+                </header>
+            </div>
+        </div>
+    </article>
 </template>
 
 <script src="./post.ts"></script>
+<style src="./post.css"></style>

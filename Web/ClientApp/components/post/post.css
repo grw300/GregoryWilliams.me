@@ -1,0 +1,27 @@
+.thumbnail {
+    position: relative;
+}
+
+.caption {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    width: 100%;
+}
+
+.caption * {
+    color: white;
+}
+
+.caption a:hover,
+.caption a:focus {
+    color: #4189C7;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active{
+    text-decoration: none;
+}

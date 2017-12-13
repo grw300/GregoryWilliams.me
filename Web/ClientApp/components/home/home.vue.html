@@ -1,6 +1,8 @@
 <template>
     <div id="home-container">
-        <banner-component />
+        <div v-for="post in posts">
+            <post-component :passedPost=post></post-component>
+        </div>
     </div>
 </template>
 
