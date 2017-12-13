@@ -31,7 +31,7 @@ namespace Api
 
             services.AddDbContext<ApiDbContext>(options =>
             {
-                options.UseSqlServer(Configuration.GetConnectionString("DBConnection"));
+                options.UseSqlServer(Configuration.GetConnectionString($"DBConnection{Environment.OSVersion.Platform}"));
             }, ServiceLifetime.Transient);
 
             services.AddJsonApi<ApiDbContext>(options =>
