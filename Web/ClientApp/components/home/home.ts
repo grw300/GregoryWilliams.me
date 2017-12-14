@@ -1,5 +1,7 @@
 import Vue from 'vue';
 import { Component } from 'vue-property-decorator';
+import store from '../../store';
+import _ from 'lodash';
 
 interface Post {
     title: string;
@@ -13,10 +15,15 @@ interface Post {
 })
 export default class HomeComponent extends Vue {
     posts: Post[] = [];
-
-    created() {
-        this.posts = this.$store.state.posts;
-        console.log(this.posts);
-        console.log("here");
+    mounted() {
+        store.dispatch('LOAD_POST_LIST')
+            .then(() => {
+                this.posts = store.state.posts;
+                console.log(this.posts);
+                console.log("here");
+            });
+    }
+    get chunkedPosts() {
+            return _.chunk(this.posts, 2);
     }
 }

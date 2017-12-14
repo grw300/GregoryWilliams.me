@@ -13,15 +13,14 @@ Vue.use(Vuex)
 export interface Post { title: string, content: string }
 
 const store = new Vuex.Store({
+    strict: true,
     state: {
         posts: [] as any[]
     },
     actions: {
         LOAD_POST_LIST: function ({ commit }) {
-            console.log('we are trying to load...');
-            jsonApi.findAll('post')
+            return jsonApi.findAll('post')
                 .then(({ data, errors, meta, links }: { data: any, errors: any, meta: any, links: any }) => {
-                    console.log(data);
                     commit('SET_POST_LIST', { list: data })
                 })
                 .catch(({ err }: { err: any }) => {
@@ -31,8 +30,7 @@ const store = new Vuex.Store({
         ADD_NEW_POST: function ({ commit }, { 'title': title, 'content': content }) {
             jsonApi.create('post', {
                 title: title,
-                content: content
-            })
+                content: content })
                 .then(({ data, errors, meta, links }: { data: any, errors: any, meta: any, links: any }) => {
                     commit('ADD_POST', { post: data })
                 })
@@ -55,4 +53,7 @@ const store = new Vuex.Store({
         }
     }
 })
+
+// store.dispatch('LOAD_POST_LIST')
+
 export default store
