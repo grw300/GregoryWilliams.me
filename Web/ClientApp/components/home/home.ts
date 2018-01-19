@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import { Component } from 'vue-property-decorator';
+import PostComponent from '../post/post';
 import store from '../../store';
 import _ from 'lodash';
 
@@ -10,7 +11,7 @@ interface Post {
 
 @Component({
     components: {
-        PostComponent: require('../post/post.vue.html')
+        PostComponent: require("../post/post.vue.html")
     }
 })
 export default class HomeComponent extends Vue {
