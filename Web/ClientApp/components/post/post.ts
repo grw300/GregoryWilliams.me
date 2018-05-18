@@ -3,6 +3,7 @@ import { mapState } from 'vuex'
 import { Component, Prop } from 'vue-property-decorator';
 
 interface Post {
+    id: number,
     title: string;
     content: string;
 }

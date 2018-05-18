@@ -10,7 +10,11 @@ jsonApi.define('post', {
 
 Vue.use(Vuex)
 
-export interface Post { title: string, content: string }
+export interface Post { 
+    id: number,
+    title: string,
+    content: string
+}
 
 const store = new Vuex.Store({
     strict: true,

@@ -26,7 +26,7 @@
             <img class="img-responsive" src="../../images/banner.jpg" alt="" />
             <div class="caption">
                 <header class="major">
-                    <h3><a href="" class="link">{{ post.title }}</a></h3>
+                    <h3><router-link :to="`/read/${post.id}`" class="link">{{ post.title }}</router-link></h3>
                     <p>{{ contentPreview }}</p>
                 </header>
             </div>

@@ -11,6 +11,9 @@ namespace GregoryWilliams.Api.Models
         [Attr("title")]
         public string Title { get; set; }
 
+        [Attr("summary")]
+        public string Summary { get; set; }
+
         [Attr("content")]
         public string Content { get; set; }
     }
