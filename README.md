@@ -1,2 +1,2 @@
 # GregoryWilliams.me
-Personal website for Gregory Williams
+Gregory Williams' personal website.
