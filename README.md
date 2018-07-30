@@ -1,2 +1,2 @@
-# GregoryWilliams.Me
+# GregoryWilliams.me
 Personal website for Gregory Williams
