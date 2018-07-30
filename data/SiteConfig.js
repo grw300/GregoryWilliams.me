@@ -3,7 +3,7 @@ module.exports = {
     siteTitleShort: "Greg's blog", // Short site title for home screen (PWA). Preferably should be under 12 characters to prevent truncation.
     siteTitleAlt: "Gregory Williams' personal blog website", // Alternative site title for SEO.
     siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
-    siteUrl: "https://GregoryWilliams.me", // Domain of your website without pathPrefix.
+    siteUrl: "https://www.GregoryWilliams.me", // Domain of your website without pathPrefix.
     pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
     siteDescription:
         "The personal blog website of Gregory Williams, software engineer in Austin, TX.", // Website description used for RSS feeds/meta description tag.
