@@ -1,6 +1,14 @@
 import React from "react";
 import Helmet from "react-helmet";
 import { graphql } from "gatsby";
+import {
+    Grid,
+    HeaderArea,
+    SidebarArea,
+    ContentArea,
+    Sidebar2Area,
+    FooterArea
+} from "../layout/grid";
 import Layout from "../layout";
 import Footer from "../components/Footer/Footer";
 import PostListing from "../components/PostListing/PostListing";
@@ -12,12 +20,21 @@ class Index extends React.Component {
         const postEdges = this.props.data.allMarkdownRemark.edges;
         return (
             <Layout location={this.props.location}>
-                <div className="index-container">
+                <Grid>
                     <Helmet title={config.siteTitle} />
                     <SEO />
-                    <PostListing postEdges={postEdges} />
-                    <Footer config={config} />
-                </div>
+                    <HeaderArea>
+                        <button />
+                    </HeaderArea>
+                    <SidebarArea />
+                    <ContentArea>
+                        <PostListing postEdges={postEdges} />
+                    </ContentArea>
+                    <Sidebar2Area />
+                    <FooterArea>
+                        <Footer config={config} />
+                    </FooterArea>
+                </Grid>
             </Layout>
         );
     }
