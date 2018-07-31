@@ -3,7 +3,7 @@ import styled from "react-emotion";
 import { Link } from "gatsby";
 import UserLinks from "../UserLinks/UserLinks";
 
-const FooterStack = styled("footer")`
+const FooterStyled = styled("footer")`
     justify-content: center;
     align-content: center;
     padding: 10px 5px 5px;
@@ -34,7 +34,7 @@ class Footer extends Component {
             return null;
         }
         return (
-            <FooterStack>
+            <FooterStyled>
                 <UserLinks config={config} labeled />
                 <NoticeContainer>
                     <h4>{copyright}</h4>
@@ -49,7 +49,7 @@ class Footer extends Component {
                         </a>.
                     </h4>
                 </NoticeContainer>
-            </FooterStack>
+            </FooterStyled>
         );
     }
 }

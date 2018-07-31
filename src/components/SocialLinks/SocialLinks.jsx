@@ -13,7 +13,7 @@ import {
 import urljoin from "url-join";
 import config from "../../../data/SiteConfig";
 
-const SocialLinksStack = styled("div")`
+const SocialLinksStyled = styled("div")`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -42,7 +42,7 @@ class SocialLinks extends Component {
         );
 
         return (
-            <SocialLinksStack>
+            <SocialLinksStyled>
                 <RedditShareButton url={url} title={post.title}>
                     <RedditIcon round size={iconSize} />
                     <RedditShareCount url={url}>
@@ -58,7 +58,7 @@ class SocialLinks extends Component {
                         {count => renderShareCount(count)}
                     </FacebookShareCount>
                 </FacebookShareButton>
-            </SocialLinksStack>
+            </SocialLinksStyled>
         );
     }
 }

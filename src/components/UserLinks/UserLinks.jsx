@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled from "react-emotion";
 
-const UserLinksStack = styled("div")`
+const UserLinksStyled = styled("div")`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -29,7 +29,7 @@ class UserLinks extends Component {
         if (!userLinks) {
             return null;
         }
-        return <UserLinksStack>{this.getLinkElements()}</UserLinksStack>;
+        return <UserLinksStyled>{this.getLinkElements()}</UserLinksStyled>;
     }
 }
 
