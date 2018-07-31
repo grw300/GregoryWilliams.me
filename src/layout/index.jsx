@@ -1,5 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import config from "../../data/SiteConfig";
 import "./index.css";
 
@@ -8,8 +10,7 @@ export default class MainLayout extends React.Component {
         function capitalize(string) {
             return string.charAt(0).toUpperCase() + string.slice(1);
         }
-        const currentPath = this.props.location.pathname
-            .replace("/", "");
+        const currentPath = this.props.location.pathname.replace("/", "");
         let title = "";
         if (currentPath === "") {
             title = "Home";
@@ -46,7 +47,9 @@ export default class MainLayout extends React.Component {
                     </title>
                     <meta name="description" content={config.siteDescription} />
                 </Helmet>
+                <Header />
                 {children}
+                <Footer config={config} />
             </div>
         );
     }
