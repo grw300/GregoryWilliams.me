@@ -32,7 +32,6 @@ class Disqus extends Component {
         return (
             <ReactDisqusComments
                 shortname={config.disqusShortname}
-                title={post.title}
                 category_id={post.category_id}
                 onNewComment={this.notifyAboutComment}
             />
