@@ -9,7 +9,7 @@ module.exports = {
     siteRss: "/rss.xml", // Path to the RSS file.
     siteFBAppID: "220944851889246", // FB Application ID for using app insights
     googleAnalyticsID: "UA-123016210-1", // GA tracking ID.
-    disqusShortname: "gregorywilliams", // Disqus shortname.
+    disqusShortname: "gregorywilliams-me", // Disqus shortname.
     postDefaultCategoryID: "Tech", // Default category for posts.
     dateFromFormat: "YYYY-MM-DD", // Date format used in the frontmatter.
     dateFormat: "DD/MM/YYYY", // Date format for display.
