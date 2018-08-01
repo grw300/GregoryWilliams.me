@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import Link from "gatsby-link";
-import styled from "react-emotion";
+import {Link} from "gatsby";
+// import styled from "react-emotion";
 
-class Header extends React.Component {
+class Header extends Component {
     render() {
         return (
             <Link to="/">

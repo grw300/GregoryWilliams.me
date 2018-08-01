@@ -22,9 +22,7 @@ class Index extends React.Component {
                 <Grid>
                     <Helmet title={config.siteTitle} />
                     <SEO />
-                    <HeaderArea>
-                        <button />
-                    </HeaderArea>
+                    <HeaderArea />
                     <SidebarArea />
                     <ContentArea>
                         <PostListing postEdges={postEdges} />
