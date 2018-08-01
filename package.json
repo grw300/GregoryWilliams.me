@@ -3,11 +3,16 @@
     "description": "Personal blog website of Gregory Williams.",
     "version": "1.0.0",
     "author": "Gregory Williams <grw300@gmail.com>",
+    "repository": {
+        "type": "git",
+        "url": "https://www.github.com/grw300/gregorywilliams.me"
+    },
     "dependencies": {
         "emotion": "^9.2.6",
         "gatsby": "next",
         "gatsby-image": "next",
         "gatsby-plugin-catch-links": "next",
+        "gatsby-plugin-facebook-analytics": "^1.0.3",
         "gatsby-plugin-feed": "next",
         "gatsby-plugin-google-analytics": "next",
         "gatsby-plugin-lodash": "next",
@@ -30,9 +35,9 @@
         "moment": "^2.22.2",
         "prismjs": "^1.15.0",
         "react": "^16.4.1",
-        "react-disqus-comments": "^1.2.0",
         "react-dom": "^16.4.1",
         "react-emotion": "^9.2.6",
+        "react-facebook": "^5.0.3",
         "react-helmet": "^5.2.0",
         "react-share": "^2.0.0",
         "react-twitter-widgets": "^1.7.1",

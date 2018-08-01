@@ -6,15 +6,10 @@ module.exports = {
         siteUrl: config.siteUrl,
         rssMetadata: {
             site_url: urljoin(config.siteUrl),
-            feed_url: urljoin(
-                config.siteUrl,
-                config.siteRss
-            ),
+            feed_url: urljoin(config.siteUrl, config.siteRss),
             title: config.siteTitle,
             description: config.siteDescription,
-            image_url: `${urljoin(
-                config.siteUrl,
-            )}/logos/logo-512.png`,
+            image_url: `${urljoin(config.siteUrl)}/logos/logo-512.png`,
             author: config.userName,
             copyright: config.copyright
         }
@@ -62,6 +57,12 @@ module.exports = {
             }
         },
         {
+            resolve: "gatsby-plugin-facebook-analytics",
+            options: {
+                appId: config.siteFBAppID
+            }
+        },
+        {
             resolve: "gatsby-plugin-nprogress",
             options: {
                 color: config.themeColor
@@ -105,23 +106,21 @@ module.exports = {
                     ret.generator = "GatsbyJS Material Starter";
                     return ret;
                 },
-                query: `
-        {
-          site {
-            siteMetadata {
-              rssMetadata {
-                site_url
-                feed_url
-                title
-                description
-                image_url
-                author
-                copyright
-              }
-            }
-          }
-        }
-      `,
+                query: `{
+                    site {
+                        siteMetadata {
+                            rssMetadata {
+                                site_url
+                                feed_url
+                                title
+                                description
+                                image_url
+                                author
+                                copyright
+                            }
+                        }
+                    }
+                }`,
                 feeds: [
                     {
                         serialize(ctx) {
@@ -145,34 +144,32 @@ module.exports = {
                                 })
                             );
                         },
-                        query: `
-                        {
+                        query: `{
                             allMarkdownRemark(
                                 limit: 1000,
                                 sort: { order: DESC, fields: [fields___date] },
                             ) {
                                 edges {
-                                node {
-                                    excerpt
-                                    html
-                                    timeToRead
-                                    fields {
-                                    slug
-                                    date
+                                    node {
+                                        excerpt
+                                        html
+                                        timeToRead
+                                        fields {
+                                            slug
+                                            date
+                                        }
+                                        frontmatter {
+                                            title
+                                            cover
+                                            summary
+                                            date
+                                            category
+                                            tags
+                                        }
                                     }
-                                    frontmatter {
-                                        title
-                                        cover
-                                        summary
-                                        date
-                                        category
-                                        tags
-                                    }
-                                }
                                 }
                             }
-                        }
-                    `,
+                        }`,
                         output: config.siteRss
                     }
                 ]

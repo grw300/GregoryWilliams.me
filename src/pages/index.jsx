@@ -10,7 +10,6 @@ import {
     FooterArea
 } from "../layout/grid";
 import Layout from "../layout";
-import Footer from "../components/Footer/Footer";
 import PostListing from "../components/PostListing/PostListing";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
@@ -31,9 +30,7 @@ class Index extends React.Component {
                         <PostListing postEdges={postEdges} />
                     </ContentArea>
                     <Sidebar2Area />
-                    <FooterArea>
-                        <Footer config={config} />
-                    </FooterArea>
+                    <FooterArea />
                 </Grid>
             </Layout>
         );

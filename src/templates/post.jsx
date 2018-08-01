@@ -4,11 +4,11 @@ import styled from "react-emotion";
 import { graphql } from "gatsby";
 import Layout from "../layout";
 import UserInfo from "../components/UserInfo/UserInfo";
-import Disqus from "../components/Disqus/Disqus";
 import PostTags from "../components/PostTags/PostTags";
 import SocialLinks from "../components/SocialLinks/SocialLinks";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
+import FacebookComments from "../components/FacebookComments";
 
 const PostMeta = styled("div")`
     display: flex;
@@ -46,7 +46,7 @@ export default class PostTemplate extends React.Component {
                             <SocialLinks postPath={slug} postNode={postNode} />
                         </PostMeta>
                         <UserInfo config={config} />
-                        <Disqus postNode={postNode} />
+                        <FacebookComments postNode={postNode} />
                     </div>
                 </div>
             </Layout>

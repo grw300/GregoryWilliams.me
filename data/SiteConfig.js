@@ -3,13 +3,12 @@ module.exports = {
     siteTitleShort: "Greg's blog", // Short site title for home screen (PWA). Preferably should be under 12 characters to prevent truncation.
     siteTitleAlt: "Gregory Williams' personal blog website", // Alternative site title for SEO.
     siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
-    siteUrl: "https://www.GregoryWilliams.me", // Domain of your website.
+    siteUrl: "https://www.gregorywilliams.me", // Domain of your website.
     siteDescription:
         "The personal blog website of Gregory Williams, software engineer in Austin, TX.", // Website description used for RSS feeds/meta description tag.
     siteRss: "/rss.xml", // Path to the RSS file.
     siteFBAppID: "220944851889246", // FB Application ID for using app insights
     googleAnalyticsID: "UA-123016210-1", // GA tracking ID.
-    disqusShortname: "gregorywilliams", // Disqus shortname.
     postDefaultCategoryID: "Tech", // Default category for posts.
     dateFromFormat: "YYYY-MM-DD", // Date format used in the frontmatter.
     dateFormat: "DD/MM/YYYY", // Date format for display.
