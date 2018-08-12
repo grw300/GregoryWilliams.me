@@ -1,35 +1,14 @@
 import React from "react";
-import Helmet from "react-helmet";
 import { graphql } from "gatsby";
-import {
-    Grid,
-    HeaderArea,
-    SidebarArea,
-    ContentArea,
-    Sidebar2Area,
-    FooterArea
-} from "../layout/grid";
 import Layout from "../layout";
 import PostListing from "../components/PostListing/PostListing";
-import SEO from "../components/SEO/SEO";
-import config from "../../data/SiteConfig";
 
 class Index extends React.Component {
     render() {
         const postEdges = this.props.data.allMarkdownRemark.edges;
         return (
             <Layout location={this.props.location}>
-                <Grid>
-                    <Helmet title={config.siteTitle} />
-                    <SEO />
-                    <HeaderArea />
-                    <SidebarArea />
-                    <ContentArea>
-                        <PostListing postEdges={postEdges} />
-                    </ContentArea>
-                    <Sidebar2Area />
-                    <FooterArea />
-                </Grid>
+                <PostListing postEdges={postEdges} />
             </Layout>
         );
     }

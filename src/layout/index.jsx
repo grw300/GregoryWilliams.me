@@ -3,7 +3,9 @@ import Helmet from "react-helmet";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import config from "../../data/SiteConfig";
+import SEO from "../components/SEO/SEO";
 import "./index.css";
+import {Grid, HeaderArea, FooterArea, SidebarArea, ContentArea } from "./grid";
 
 export default class MainLayout extends React.Component {
     getLocalTitle() {
@@ -47,9 +49,17 @@ export default class MainLayout extends React.Component {
                     </title>
                     <meta name="description" content={config.siteDescription} />
                 </Helmet>
-                <Header />
-                {children}
-                <Footer config={config} />
+                <SEO />
+                <Grid>
+                    <HeaderArea>
+                        <Header />
+                    </HeaderArea>
+                    <SidebarArea />
+                    <ContentArea>{children}</ContentArea>
+                    <FooterArea>
+                        <Footer config={config} />
+                    </FooterArea>
+                </Grid>
             </div>
         );
     }
