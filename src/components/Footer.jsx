@@ -35,18 +35,14 @@ class Footer extends Component {
         }
         return (
             <FooterStyled>
-                <UserLinks config={config} labeled />
                 <NoticeContainer>
                     <h4>{copyright}</h4>
-
-                    <Link to={url}>
-                        <button>Subscribe</button>
-                    </Link>
                     <h4>
                         Based on{" "}
                         <a href="https://github.com/Vagr9K/gatsby-advanced-starter">
                             Gatsby Advanced Starter
-                        </a>.
+                        </a>
+                        .
                     </h4>
                 </NoticeContainer>
             </FooterStyled>

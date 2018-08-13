@@ -21,7 +21,7 @@ export const Grid = styled("div")`
         grid-template-areas:
             "header   header"
             "sidebar  content"
-            "footer   footer";
+            "footer   content";
     }
 
     /* Medium devices (landscape tablets) */
