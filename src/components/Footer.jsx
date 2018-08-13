@@ -38,7 +38,7 @@ class Footer extends Component {
                 <UserLinks config={config} labeled />
                 <NoticeContainer>
                     <h4>{copyright}</h4>
-
+                    <Link to="/privacy">Privacy</Link>
                     <Link to={url}>
                         <button>Subscribe</button>
                     </Link>
@@ -46,7 +46,8 @@ class Footer extends Component {
                         Based on{" "}
                         <a href="https://github.com/Vagr9K/gatsby-advanced-starter">
                             Gatsby Advanced Starter
-                        </a>.
+                        </a>
+                        .
                     </h4>
                 </NoticeContainer>
             </FooterStyled>
