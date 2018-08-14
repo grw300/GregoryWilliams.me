@@ -1,9 +1,8 @@
 import React from "react";
 import Helmet from "react-helmet";
 import styled from "react-emotion";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import Layout from "../layout";
-import UserInfo from "../components/UserInfo/UserInfo";
 import PostTags from "../components/PostTags/PostTags";
 import SocialLinks from "../components/SocialLinks/SocialLinks";
 import SEO from "../components/SEO/SEO";
@@ -14,6 +13,11 @@ const PostMeta = styled("div")`
     display: flex;
     flex-direction: column;
     justify-content: center;
+`;
+
+const PostNavigationStyled = styled("div")`
+    display: flex;
+    justify-content: space-between;
 `;
 
 export default class PostTemplate extends React.Component {
@@ -45,7 +49,10 @@ export default class PostTemplate extends React.Component {
                             <PostTags tags={post.tags} />
                             <SocialLinks postPath={slug} postNode={postNode} />
                         </PostMeta>
-                        <UserInfo config={config} />
+                        <PostNavigationStyled>
+                            <Link to={postNode.fields.nextSlug}>Next</Link>
+                            <Link to={postNode.fields.prevSlug}>Prev</Link>
+                        </PostNavigationStyled>
                         <FacebookComments postNode={postNode} />
                     </div>
                 </div>
