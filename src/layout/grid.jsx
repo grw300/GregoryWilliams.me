@@ -4,7 +4,8 @@ export const Grid = styled("div")`
     display: grid;
     grid-gap: 16px;
     width: 100vw;
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
     margin-left: auto;
     margin-right: auto;
     grid-template-rows: auto auto 1fr auto;
