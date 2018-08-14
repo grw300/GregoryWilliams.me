@@ -50,8 +50,8 @@ export default class PostTemplate extends React.Component {
                             <SocialLinks postPath={slug} postNode={postNode} />
                         </PostMeta>
                         <PostNavigationStyled>
-                            <Link to={postNode.fields.nextSlug}>Next</Link>
                             <Link to={postNode.fields.prevSlug}>Prev</Link>
+                            <Link to={postNode.fields.nextSlug}>Next</Link>
                         </PostNavigationStyled>
                         <FacebookComments postNode={postNode} />
                     </div>
