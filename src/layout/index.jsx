@@ -4,7 +4,7 @@ import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
 import Footer from "../components/Footer";
 import config from "../../data/SiteConfig";
-import SEO from "../components/SEO/SEO";
+import SEO from "../components/SEO";
 import "./index.css";
 import { Grid, HeaderArea, FooterArea, SidebarArea, ContentArea } from "./grid";
 

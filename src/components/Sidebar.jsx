@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled from "react-emotion";
 import { Link } from "gatsby";
-import UserLinks from "./UserLinks/UserLinks";
+import UserLinks from "./UserLinks";
 
 const SidebarStyled = styled("div")`
     text-align: center;

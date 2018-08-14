@@ -3,9 +3,9 @@ import Helmet from "react-helmet";
 import styled from "react-emotion";
 import { graphql, Link } from "gatsby";
 import Layout from "../layout";
-import PostTags from "../components/PostTags/PostTags";
-import SocialLinks from "../components/SocialLinks/SocialLinks";
-import SEO from "../components/SEO/SEO";
+import PostTags from "../components/PostTags";
+import SocialLinks from "../components/SocialLinks";
+import SEO from "../components/SEO";
 import config from "../../data/SiteConfig";
 import FacebookComments from "../components/FacebookComments";
 
@@ -18,6 +18,11 @@ const PostMeta = styled("div")`
 const PostNavigationStyled = styled("div")`
     display: flex;
     justify-content: space-between;
+`;
+
+const ScaledImage = styled("img")`
+    max-width: 100%;
+    height: auto;
 `;
 
 export default class PostTemplate extends React.Component {
@@ -41,7 +46,7 @@ export default class PostTemplate extends React.Component {
                     <div>
                         <h1>{post.title}</h1>
                         <h2>{post.summary}</h2>
-                        <img alt={post.category} src={post.cover} />
+                        <ScaledImage alt={post.category} src={post.cover} />
                         <div
                             dangerouslySetInnerHTML={{ __html: postNode.html }}
                         />
