@@ -14,8 +14,8 @@ class About extends Component {
         return (
             <AboutStyled>
                 <h1>
-                    Edit About component or pages/about.jsx to include your
-                    information.
+                    Gregory Williams is a software engineer working in Austin,
+                    TX.
                 </h1>
             </AboutStyled>
         );

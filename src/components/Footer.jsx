@@ -18,17 +18,16 @@ class Footer extends Component {
         }
         return (
             <FooterStyled>
-                <h4>{copyright}</h4>
-                <h4>
+                <p>
                     <Link to="/privacy">Privacy Policy</Link>
-                </h4>
-                <h4>
+                </p>
+                <p>
                     Based on{" "}
                     <a href="https://github.com/Vagr9K/gatsby-advanced-starter">
                         Gatsby Advanced Starter
                     </a>
-                    .
-                </h4>
+                </p>
+                <p>{copyright}</p>
             </FooterStyled>
         );
     }

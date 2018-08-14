@@ -56,7 +56,7 @@ export default class MainLayout extends React.Component {
                         <Header />
                     </HeaderArea>
                     <SidebarArea>
-                        <Sidebar config={config}/>
+                        <Sidebar config={config} />
                     </SidebarArea>
                     <ContentArea>{children}</ContentArea>
                     <FooterArea>
