@@ -1,12 +1,20 @@
 import React from "react";
+import { Link } from "gatsby";
 import Helmet from "react-helmet";
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
 import Footer from "../components/Footer";
 import config from "../../data/SiteConfig";
-import SEO from "../components/SEO/SEO";
+import SEO from "../components/SEO";
 import "./index.css";
-import { Grid, HeaderArea, FooterArea, SidebarArea, ContentArea } from "./grid";
+import {
+    Grid,
+    HomeLinkArea,
+    HeaderArea,
+    FooterArea,
+    SidebarArea,
+    ContentArea
+} from "./grid";
 
 export default class MainLayout extends React.Component {
     getLocalTitle() {
@@ -52,11 +60,16 @@ export default class MainLayout extends React.Component {
                 </Helmet>
                 <SEO />
                 <Grid>
+                    <HomeLinkArea>
+                        <Link to="/">
+                            <h3>GregoryWilliams.me</h3>
+                        </Link>
+                    </HomeLinkArea>
                     <HeaderArea>
                         <Header />
                     </HeaderArea>
                     <SidebarArea>
-                        <Sidebar config={config}/>
+                        <Sidebar config={config} />
                     </SidebarArea>
                     <ContentArea>{children}</ContentArea>
                     <FooterArea>

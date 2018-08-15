@@ -1,12 +1,11 @@
 import React from "react";
 import Helmet from "react-helmet";
 import styled from "react-emotion";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import Layout from "../layout";
-import UserInfo from "../components/UserInfo/UserInfo";
-import PostTags from "../components/PostTags/PostTags";
-import SocialLinks from "../components/SocialLinks/SocialLinks";
-import SEO from "../components/SEO/SEO";
+import PostTags from "../components/PostTags";
+import SocialLinks from "../components/SocialLinks";
+import SEO from "../components/SEO";
 import config from "../../data/SiteConfig";
 import FacebookComments from "../components/FacebookComments";
 
@@ -14,6 +13,16 @@ const PostMeta = styled("div")`
     display: flex;
     flex-direction: column;
     justify-content: center;
+`;
+
+const PostNavigationStyled = styled("div")`
+    display: flex;
+    justify-content: space-between;
+`;
+
+const ScaledImage = styled("img")`
+    max-width: 100%;
+    height: auto;
 `;
 
 export default class PostTemplate extends React.Component {
@@ -37,7 +46,7 @@ export default class PostTemplate extends React.Component {
                     <div>
                         <h1>{post.title}</h1>
                         <h2>{post.summary}</h2>
-                        <img alt={post.category} src={post.cover} />
+                        <ScaledImage alt={post.category} src={post.cover} />
                         <div
                             dangerouslySetInnerHTML={{ __html: postNode.html }}
                         />
@@ -45,7 +54,10 @@ export default class PostTemplate extends React.Component {
                             <PostTags tags={post.tags} />
                             <SocialLinks postPath={slug} postNode={postNode} />
                         </PostMeta>
-                        <UserInfo config={config} />
+                        <PostNavigationStyled>
+                            <Link to={postNode.fields.prevSlug}>Prev</Link>
+                            <Link to={postNode.fields.nextSlug}>Next</Link>
+                        </PostNavigationStyled>
                         <FacebookComments postNode={postNode} />
                     </div>
                 </div>

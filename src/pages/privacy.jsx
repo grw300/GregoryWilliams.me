@@ -1,16 +1,16 @@
 import React, { Component } from "react";
 import Helmet from "react-helmet";
 import Layout from "../layout";
-import About from "../components/About";
+import Privacy from "../components/Privacy";
 import config from "../../data/SiteConfig";
 
 class AboutPage extends Component {
     render() {
         return (
             <Layout location={this.props.location}>
-                <div className="about-container">
-                    <Helmet title={`About | ${config.siteTitle}`} />
-                    <About />
+                <div className="privacy-container">
+                    <Helmet title={`Privacy | ${config.siteTitle}`} />
+                    <Privacy />
                 </div>
             </Layout>
         );

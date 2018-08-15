@@ -15,8 +15,6 @@ class UserLinks extends Component {
         const { labeled } = this.props;
         return userLinks.map(link => (
             <a
-                target="_blank"
-                rel="noopener noreferrer"
                 key={link.label}
                 href={link.url}
             >
