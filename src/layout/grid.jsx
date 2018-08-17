@@ -8,7 +8,7 @@ export const Grid = styled("div")`
     min-height: 100vh;
     margin-left: auto;
     margin-right: auto;
-    grid-temlate-columns: auto 1fr;
+    grid-template-columns: auto 1fr;
     grid-template-rows: auto auto 1fr auto;
     grid-template-areas:
         "home-link header"
