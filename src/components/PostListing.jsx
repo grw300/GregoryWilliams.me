@@ -1,5 +1,16 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { Link } from "gatsby";
+
+const PostList = postList => (
+    <Fragment>
+        {postList.map(post => (
+            <Link to={post.path} key={post.title}>
+                <h1>{post.title}</h1>
+                <h2>{post.summary}</h2>
+            </Link>
+        ))}
+    </Fragment>
+);
 
 class PostListing extends React.Component {
     getPostList() {
@@ -18,18 +29,10 @@ class PostListing extends React.Component {
         });
         return postList;
     }
+
     render() {
         const postList = this.getPostList();
-        return (
-            <div>
-                {postList.map(post => (
-                    <Link to={post.path} key={post.title}>
-                        <h1>{post.title}</h1>
-                        <h2>{post.summary}</h2>
-                    </Link>
-                ))}
-            </div>
-        );
+        return PostList(postList);
     }
 }
 
