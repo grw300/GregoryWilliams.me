@@ -8,4 +8,4 @@ WORKDIR /app
 COPY . .
 RUN npm install
 RUN gatsby build
-RUN gatsby serve
+CMD [ "gatsby", "serve", "-H", "0.0.0.0" ]
