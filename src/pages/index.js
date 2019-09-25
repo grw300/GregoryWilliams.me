@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet"
 function index() {
   return (
     <div>
-      <Appbar />
+      {/* <Appbar /> */}
       <Info />
       <Helmet>
         <meta charSet="utf-8" />
