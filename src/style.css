@@ -1,21 +1,21 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cinzel|Inconsolata:400,700&display=swap');
 
 html {
   background-color: #333F48 !important;
   color: #fff !important;
   /* font-size: 2em; */
-  font-family: "Courier New", sans-serif !important;
+  font-family: "Cinzel", sans-serif !important;
 }
 
 body {
   background-color: #333F48 !important;
   color: #fff !important;
   font-size: 20px !important;
-  font-family: "Courier New", sans-serif !important;
+  font-family: "Cinzel", sans-serif !important;
 }
 
 .code {
-  font-family: "Source Code Pro", monospace;
+  font-family: "Inconsolata", monospace;
 }
 
 .info {
@@ -25,9 +25,14 @@ body {
 
 .social {
   display: flex;
-  justify-content: center;
   align-items: center;
   color: white !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .info, .code, .social {
+    justify-content: center;
+  }
 }
 
 .icon {
