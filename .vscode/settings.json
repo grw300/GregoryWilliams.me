@@ -7,6 +7,8 @@
         "gregorywilliams",
         "noopener",
         "noreferrer",
-        "urljoin"
-    ]
+        "urljoin",
+        "traefik"
+    ],
+    "git.ignoreLimitWarning": true
 }
