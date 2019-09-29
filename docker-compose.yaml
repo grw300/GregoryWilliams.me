@@ -1,11 +1,18 @@
 version: "3"
 
+networks:
+  proxy:
+    external: true
+
 services:
   app:
     image: grw300/gregorywilliamsme:1.0.0
     ports:
       - 9000
+    networks:
+      - proxy
     labels:
+      - "traefik.docker.network=proxy"
       - "traefik.enable=true" # Enable reverse-proxy for this service
       - "traefik.frontend.rule=Host:gregorywilliams.me" # Domain name for the app
       - "traefik.port=9000"
@@ -19,6 +26,8 @@ services:
       - "80:80" # The HTTP port
       - "443:443" # The HTTPS port
       - "8080:8080" # The web UI
+    networks:
+      - proxy
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock # So that Traefik can listen to the Docker events
       - ./traefik/traefik.toml:/traefik.toml # Traefik configuration file
