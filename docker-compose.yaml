@@ -2,7 +2,7 @@ version: "3"
 
 services:
   app:
-    build: ./app # A node app
+    image: grw300/gregorywilliamsme:1.0.0
     ports:
       - 9000
     labels:
@@ -11,7 +11,9 @@ services:
 
   reverse-proxy:
     image: traefik
-    command: --api # Enables the web UI
+    command: 
+      - "--api" # Enables the web UI
+    ports:
       - "80:80" # The HTTP port
       - "443:443" # The HTTPS port
       - "8080:8080" # The web UI
