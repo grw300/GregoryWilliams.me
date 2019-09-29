@@ -19,5 +19,5 @@ services:
       - "8080:8080" # The web UI
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock # So that Traefik can listen to the Docker events
-      - ./traefik/traefik.yaml:/traefik.yaml # Traefik configuration file
+      - ./traefik/traefik.toml:/traefik.toml # Traefik configuration file
       - ./volumes/traefik-acme:/acme # Tell Traefik to save SSL certs here
