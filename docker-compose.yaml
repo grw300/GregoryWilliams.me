@@ -14,7 +14,7 @@ services:
     labels:
       - "traefik.docker.network=proxy"
       - "traefik.enable=true" # Enable reverse-proxy for this service
-      - "traefik.frontend.rule=Host:gregorywilliams.me" # Domain name for the app
+      - "traefik.frontend.rule=Host:gregorywilliams.me,www.gregorywilliams.me" # Domain name for the app
       - "traefik.port=9000"
       - "traefik.protocol=http"
 
