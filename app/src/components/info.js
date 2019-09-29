@@ -18,7 +18,7 @@ export default function info() {
       <div className="text-muted mx-5 my-4 h3 code">
         Husband, father, and physics enthusiast living in Austin, TX.
       </div>
-      <div className="h1 mt-5 social">
+      <div className="h1 mt-5 mb-5 social">
         <a className="mr-5 icon" href="https://twitter.com/GregWill">
           <Twitter />
         </a>
