@@ -6,7 +6,7 @@ networks:
 
 services:
   app:
-    image: grw300/gregorywilliamsme:1.0.1
+    image: grw300/gregorywilliamsme:1.0.2
     ports:
       - 9000
     networks:
