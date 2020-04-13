@@ -27,7 +27,8 @@ jobs:
         uses: manusa/actions-publish-docker@v1.0.1
         with:
           name: grw300/gregorywilliams.me
-
+          username: ${{ secrets.DOCKER_USER }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
       # Copy docker-compose and traefik config
       - name: copy file via ssh password
         uses: appleboy/scp-action@master
