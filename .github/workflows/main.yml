@@ -46,4 +46,4 @@ jobs:
           key: ${{ secrets.KEY }}
           script: |
             cd GregoryWilliams.me
-            docker-compose -d up
+            docker-compose up -d
