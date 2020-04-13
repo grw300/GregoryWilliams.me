@@ -6,7 +6,7 @@ networks:
 
 services:
   app:
-    image: grw300/gregorywilliamsme:1.0.2
+    image: grw300/gregorywilliamsme:latest
     ports:
       - 9000
     networks:
@@ -20,7 +20,7 @@ services:
 
   reverse-proxy:
     image: traefik:1.7-alpine
-    command: 
+    command:
       - "--api" # Enables the web UI
     ports:
       - "80:80" # The HTTP port
