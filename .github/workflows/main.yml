@@ -44,4 +44,6 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY }}
-          script: docker-compose -d up
+          script: |
+            cd GregoryWilliams.me
+            docker-compose -d up
