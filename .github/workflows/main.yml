@@ -40,12 +40,12 @@ jobs:
           target: "GregoryWilliams.me"
       - name: Execute docker-compose
         uses: appleboy/ssh-action@master
+        envs:
+          DOCKER_HOST: "127.0.0.1:2375"
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY }}
-          envs:
-            DOCKER_HOST: "127.0.0.1:2375"
           script: |
             cd GregoryWilliams.me
             docker-compose up -d
