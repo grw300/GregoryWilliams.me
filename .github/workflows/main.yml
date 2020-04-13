@@ -44,6 +44,8 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY }}
+          envs:
+            DOCKER_HOST: "127.0.0.1:2375"
           script: |
             cd GregoryWilliams.me
             docker-compose up -d
