@@ -8,7 +8,7 @@ services:
   app:
     image: grw300/gregorywilliamsme:latest
     ports:
-      - "9000:80"
+      - 9000
     networks:
       - proxy
     labels:
